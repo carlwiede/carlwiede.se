@@ -1,4 +1,4 @@
 # carlwiede.se
 My personal website that really embodies my extensive knowledge in web development.<br>
-Not actually hosted at *carlwiede.se* at the moment, but we're getting there.
+Feel free to check out this marvel of modern web technologies.
 
