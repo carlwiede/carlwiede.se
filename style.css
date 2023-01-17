@@ -201,8 +201,9 @@ section.dark .tooltip {
     z-index: 1;
     opacity: .40;
 
-    width: 120px;
-    padding: 5px 10px 5px 15px;
+    width: auto;
+    padding: 5px 10px 5px 10px;
+    white-space: nowrap;
 
     background: #f0f8ff;
     color: #777;
@@ -217,7 +218,7 @@ section.dark .tooltip {
     transform: translateY(9px);
     transition: all 0.3s ease-in-out;
 
-    box-shadow: 2px 2px 3px rgba(56, 54, 54, 0.86);
+    box-shadow: 0px 0px 3px rgba(56, 54, 54, 0.86);
 }
 
 .tooltip::after {
@@ -255,15 +256,27 @@ section.dark .tooltip::after {
     }
 }
 
+/* Tooltip hover */
+
 .left:hover { transform: translateX(-6px) }
+.bottom:hover { transform: translateY(6px) }
 
 
 /* Left */
 
-.left .tooltip { top:-20%; left: -170% }
+.left .tooltip { top:-5%; left: -125%; }
 
 .left .tooltip::after {
     top: 40%;
     left: 90%;
     transform: rotate(-90deg);
+}
+
+/* Bottom */
+
+.bottom .tooltip { top: 80%; left: -45%; }
+
+.bottom .tooltip::after {
+    top: -17%;
+    transform: rotate(180deg);
 }
