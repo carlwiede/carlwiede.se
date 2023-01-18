@@ -1,4 +1,10 @@
-function toggleDark(){
+window.onload = function() {   
+
+    // Dark mode toggle
     const sec = document.querySelector('.sec');
-    sec.classList.toggle('dark');
+    const toggle = document.querySelector('.toggle');
+    toggle.addEventListener("click", function (){
+        sec.classList.toggle('dark');
+    });
+
 }

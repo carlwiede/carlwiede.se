@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>carlwiede</title>
@@ -8,10 +9,15 @@
     <script src="https://kit.fontawesome.com/f875fa70f4.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
+
 <body>
     <section class="sec dark">
         <div class="card">
-            <div class="toggle" onclick="toggleDark()"></div>
+            <div class="toggle">
+                <div class="tooltip">
+                    <p>Switch themes!</p>
+                </div>
+            </div>
             <div class="content">
                 <div class="image-text">
                     <div class="image-box">
@@ -20,12 +26,28 @@
                     <h3>Carl Wiede<br><span>Computer Engineering Student</span></h3>
                 </div>
                 <ul class="sci">
-                    <li><a href="https://github.com/carlwiede"><i class="fa fa-brands fa-github" aria-hidden="true"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/carl-wiede-87b214168/"><i class="fa fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
-                    <li><a href="mailto:hello@carlwiede.se"><i class="fa fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+                    <div class="con-tooltip left">
+                        <li><a href="https://github.com/carlwiede"><i class="fa fa-brands fa-github" aria-hidden="true"></i></a></li>
+                        <div class="tooltip">
+                            <p>Projects</p>
+                        </div>
+                    </div>
+                    <div class="con-tooltip bottom">
+                        <li><a href="https://www.linkedin.com/in/carl-wiede-87b214168/"><i class="fa fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+                        <div class="tooltip">
+                            <p>Hire me</p>
+                        </div>
+                    </div>
+                    <div class="con-tooltip right">
+                        <li><a href="mailto:hello@carlwiede.se"><i class="fa fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+                        <div class="tooltip">
+                            <p>Hit me up</p>
+                        </div>
+                    </div>
                 </ul>
             </div> 
         </div>
     </section>
 </body>
+
 </html>
