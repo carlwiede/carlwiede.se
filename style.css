@@ -158,7 +158,6 @@ section .card .sci li a:hover:before
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #e9f5ff;;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -166,25 +165,18 @@ section .card .sci li a:hover:before
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background 0.5s;
-}
-
-section.dark .toggle
-{
-    background: #404852;
+    transition: 0.5s ease-in-out;
+    font-size: 1.5em;
 }
 
 .toggle::before
 {
-    content: '\f186';
-    font-family: fontAwesome;
-    color: #2fa1ff;
+    content: '🌑';
 }
 
 section.dark .toggle::before
 {
-    content: '\f185';
-    color: #fff;
+    content: '☀️';
 }
 
 .con-tooltip {
