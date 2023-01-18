@@ -95,6 +95,7 @@ section.dark .card .image-text h3 span
 section .card .sci
 {
     display: flex;
+    margin-top: 15px;
 }
 
 section .card .sci li
@@ -181,7 +182,6 @@ section.dark .toggle::before
 
 .con-tooltip {
     transition: all 0.3s ease-in-out;
-    margin: 10px;
     border-radius: 50%;
 }
 
@@ -269,6 +269,8 @@ section.dark .tooltip::after {
 }
 
 /* Bottom */
+
+.bottom { margin-left: 25px; margin-right: 25px; }
 
 .bottom .tooltip { top: 80%; left: -65%; }
 
