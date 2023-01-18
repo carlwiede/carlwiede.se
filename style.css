@@ -26,10 +26,10 @@ section.dark
 section .card 
 {
     position: relative;
-    width: 450px;
-    height: 550px;
+    width: 400px;
+    height: 450px;
     background: #fff;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.025);
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
     border-radius: 16px;
     display: flex;
     justify-content: center;
@@ -95,13 +95,12 @@ section.dark .card .image-text h3 span
 section .card .sci
 {
     display: flex;
-    margin-top: 15px;
 }
 
 section .card .sci li
 {
     list-style: none;
-    margin: 5px;
+    border-radius: inherit;
 }
 
 section .card .sci li a
@@ -115,9 +114,10 @@ section .card .sci li a
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    border-radius: 50%;
+    border-radius: inherit;
     font-size: 20px;
     transition: 0.5s;
+    /* Look here */
 }
 
 section.dark .card .sci li a
@@ -181,7 +181,7 @@ section.dark .toggle
     color: #2fa1ff;
 }
 
-section.dark .toggle:before
+section.dark .toggle::before
 {
     content: '\f185';
     color: #fff;
@@ -189,6 +189,8 @@ section.dark .toggle:before
 
 .con-tooltip {
     transition: all 0.3s ease-in-out;
+    margin: 10px;
+    border-radius: 50%;
 }
 
 section.dark .tooltip {
@@ -198,7 +200,9 @@ section.dark .tooltip {
 
 .tooltip {
     visibility: hidden;
-    z-index: 1;
+    pointer-events: none;
+
+    z-index: 2000;
     opacity: .40;
 
     width: auto;
@@ -258,13 +262,13 @@ section.dark .tooltip::after {
 
 /* Tooltip hover */
 
-.left:hover { transform: translateX(-6px) }
-.bottom:hover { transform: translateY(6px) }
-
+.con-tooltip.left:hover { transform: translateX(-6px) }
+.con-tooltip.bottom:hover { transform: translateY(6px) }
+.con-tooltip.right:hover { transform: translateX(6px) }
 
 /* Left */
 
-.left .tooltip { top:-5%; left: -125%; }
+.left .tooltip { top:0%; left: -165%; }
 
 .left .tooltip::after {
     top: 40%;
@@ -274,9 +278,19 @@ section.dark .tooltip::after {
 
 /* Bottom */
 
-.bottom .tooltip { top: 80%; left: -45%; }
+.bottom .tooltip { top: 80%; left: -65%; }
 
 .bottom .tooltip::after {
     top: -17%;
     transform: rotate(180deg);
+}
+
+/* Right */
+
+.right .tooltip { top: 0%; left: 90%; }
+
+.right .tooltip:after {
+    top: 40%;
+    left: -12%;
+    transform: rotate(90deg);
 }
