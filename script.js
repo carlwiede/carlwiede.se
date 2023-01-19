@@ -14,12 +14,13 @@ window.onload = function() {
         }
     });
 
-    // Set initial Dark/Light
+    // Check if there should be light
     isDark = localStorage.getItem('darkMode');
     if (isDark === null) {
-        // First visist on site, let there be darkness
+        // First visit on site, let there be darkness
         localStorage.setItem('darkMode', 'on');
     } else if (isDark === 'off') {
+        // Turn the light on if darkMode is off
         sec.classList.toggle('dark');
     }
 
