@@ -1,7 +1,5 @@
 window.onload = function() {   
 
-    console.log(document.referrer);
-
     // Pointers to section and toggle elements
     const sec = document.querySelector('.sec');
     const toggle = document.querySelector('.toggle');
